@@ -19,5 +19,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "reactstrap": "^8.8.1"
-  }
+  },
+
+  "cacheDirectories": [".next/cache"]
+
 }

@@ -17,8 +17,6 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
 //   }
 // `;
 
-
-
 class Page extends React.Component {
   state = {
     isFetching: true
@@ -28,6 +26,7 @@ class Page extends React.Component {
     axios.get(`${API_URL}/blogs`)
     .then((response) => {
       console.log(response);
+      console.log(API_URL)
       this.setState({
         isFetching: false,
         data: response.data
@@ -36,7 +35,6 @@ class Page extends React.Component {
   }
 
   render() {
-    console.log(1);
     return (
       <div>
         {this.state.isFetching ? (
