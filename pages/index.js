@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
 // import { gql } from "apollo-boost";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
+const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 // const QUERY = gql`
 //   {
