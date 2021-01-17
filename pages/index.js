@@ -17,18 +17,6 @@ const QUERY = gql`
   }
 `;
 
-// export async function getServerSideProps(){
-//   const response = await axios.get('http://localhost:1337/blogs');
-//   console.log(response);
-
-//   return {
-//     props: {
-//       data: response
-//     }
-//   }
-// }
-
-
 
 
 const Home = ({ restaurants, error }) => {
@@ -57,6 +45,8 @@ Home.getInitialProps = async ctx => {
   try {
     const res = await axios.get(`${API_URL}/blogs`);
     const restaurants = res.data;
+    console.log('asdf');
+    console.log(restaurants)
     return { restaurants };
   } catch (error) {
     return { error };
