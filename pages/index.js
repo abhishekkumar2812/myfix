@@ -1,56 +1,60 @@
 import { Button, Alert } from "reactstrap";
+import React from 'react'
 import fetch from 'isomorphic-unfetch';
 import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
+// import { gql } from "apollo-boost";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
-// const API_URL = "http://localhost:1337"
 
-const QUERY = gql`
-  {
-    blogs {
-      id
-      title
-      content
-    }
+// const QUERY = gql`
+//   {
+//     blogs {
+//       id
+//       title
+//       content
+//     }
+//   }
+// `;
+
+
+
+class Page extends React.Component {
+  state = {
+    isFetching: true
   }
-`;
 
+  componentDidMount(){
+    axios.get(`${API_URL}/blogs`)
+    .then((response) => {
+      console.log(response);
+      this.setState({
+        isFetching: false,
+        data: response.data
+      })
+    })
+  }
 
-
-const Home = ({ restaurants, error }) => {
-  console.log(restaurants)
-  console.log(API_URL)
-  return(
-    <div>
+  render() {
+    console.log(1);
+    return (
       <div>
-        <Alert color="primary">
-          Hello Project is strapi-next with Bootstrap
-        </Alert>
-        &nbsp; <Button color="primary">Hello from nextjs</Button>
-      </div>
-      <ul>
-      {restaurants.map(restaurant => (
-        <li key={restaurant.id}>{restaurant.title}
-          <div>{restaurant.content}</div>
-        </li>
-      ))}
-    </ul>
+        {this.state.isFetching ? (
+          <div>Loading...</div>
+        ) : 
+          <ul>
+          {this.state.data.map(restaurant => (
+            <li key={restaurant.id}>{restaurant.title}
+              <div>{restaurant.content}</div>
+            </li>
+          ))}
+        </ul>
+      }
     </div>
-  );
+    )
+  }
 }
 
-Home.getInitialProps = async ctx => {
-  try {
-    const res = await axios.get(`${API_URL}/blogs`);
-    const restaurants = res.data;
-    console.log('asdf');
-    console.log(restaurants)
-    return { restaurants };
-  } catch (error) {
-    return { error };
-  }
-};
+export default Page
 
-export default Home;
+
