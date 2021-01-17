@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
 // import { gql } from "apollo-boost";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+// const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 // const QUERY = gql`
 //   {
@@ -23,10 +23,10 @@ class Page extends React.Component {
   }
 
   componentDidMount(){
-    axios.get(`${API_URL}/blogs`)
+    axios.get(`https://deadtired.herokuapp.com/blogs`)
     .then((response) => {
       console.log(response);
-      console.log(API_URL)
+      
       this.setState({
         isFetching: false,
         data: response.data
