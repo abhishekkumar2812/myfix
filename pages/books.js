@@ -1,0 +1,56 @@
+import { Button, Alert } from "reactstrap";
+import React from 'react'
+import fetch from 'isomorphic-unfetch';
+import axios from 'axios';
+import { useQuery } from "@apollo/react-hooks";
+import BookCard from "../components/BookCard.js";
+
+import NavBar from '../components/Navbar.js'
+import styles from '../styles/Books.module.scss'
+import Link from "next/link";
+
+class Books extends React.Component {
+    state = {
+      isFetching: true
+    }
+  
+    componentDidMount(){
+      axios.get(`https://deadtired.herokuapp.com/learnings`)
+      .then((response) => {
+        console.log(response);
+  
+        this.setState({
+          isFetching: false,
+          data: response.data
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+        console.log('fata')
+      })
+    }
+  
+    render() {
+      return (
+        <div>
+          <NavBar/>
+          {this.state.isFetching ? (
+            <div>Loading...</div>
+          ) : 
+            <div className={styles.bookCardWrapper}>
+            {this.state.data.map(post => (
+              <Link as={`/books/${post.id}`} href="/books/[id]" key={post.id}>
+                <a>
+                    <BookCard  post = {post} />
+                </a>
+              </Link>
+            ))}
+          </div>
+        }
+          
+        </div>
+      )
+    }
+  }
+  
+  export default Books

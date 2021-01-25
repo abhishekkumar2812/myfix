@@ -1,0 +1,27 @@
+.navbarContainer{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    top: 0;
+    background-color: purple;
+    border-radius:30px;
+}
+.navList{
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  border-radius: 5px;
+}
+.navItems{
+    margin: auto;
+    padding: 5px;
+    cursor: pointer;
+}

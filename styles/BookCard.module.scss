@@ -1,0 +1,25 @@
+.bookCardContainer{
+    display: flex;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    
+
+}
+.imageContainer{
+    flex: 1;
+    background-color: blue;
+}
+.detailsContainer{
+    flex: 3;
+    position: relative;
+    background-color: greenyellow;
+}
+.title{
+
+}
+.rating{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
