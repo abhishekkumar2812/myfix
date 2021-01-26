@@ -15,7 +15,7 @@ class Books extends React.Component {
     }
   
     componentDidMount(){
-      axios.get(`https://deadtired.herokuapp.com/learnings`)
+      axios.get(`https://deadtired.herokuapp.com/books`)
       .then((response) => {
         console.log(response);
   
@@ -40,9 +40,9 @@ class Books extends React.Component {
             <div className={styles.bookCardWrapper}>
             {this.state.data.map(post => (
               <Link as={`/books/${post.id}`} href="/books/[id]" key={post.id}>
-                <a>
+                <a className = {styles.anchorFlex}>
                     <BookCard  post = {post} />
-                </a>
+                    </a>
               </Link>
             ))}
           </div>

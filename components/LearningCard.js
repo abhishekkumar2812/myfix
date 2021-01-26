@@ -9,20 +9,22 @@ import styles from '../styles/LearningCard.module.scss'
 
 class LearningCard extends Component{
 
-    // state = {
-    //     title:'',
-    //     content:''
-    // };
+    modalOpen = () =>{
+        this.props.onClick(this.props.post)
+    }
 
     render(){
         return(
-            <div>
-                <div className={styles.learningCardContainer}>
-                <div>
-                    {this.props.post.title}
+            // onClick={this.props.onClick}
+                <div className={styles.learningCardContainer} onClick={this.modalOpen}>
+                    <h2 className ={styles.learningCardTitle}>
+                        {this.props.post.title}
+                    </h2>
+                    <div className ={styles.learningCardContent}>
+                    {   this.props.post.content}
                     </div>
                 </div>
-            </div>
+            
         )
     }
 }

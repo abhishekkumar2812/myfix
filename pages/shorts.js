@@ -6,14 +6,35 @@ import { useQuery } from "@apollo/react-hooks";
 import LearningCard from "../components/LearningCard";
 
 import NavBar from '../components/Navbar.js'
+import styles from '../styles/Shorts.module.scss'
+import ShortsModal from "../components/ShortsModal";
 
 class Shorts extends React.Component {
     state = {
-      isFetching: true
+      isFetching: true,
+      modal: false
+    }
+
+    modalOpen = (post) => {
+     // e.preventDefault();
+     console.log(post)
+     this.setState({
+        ...this.state,
+        modal: true,
+        modalData: post
+     })
+    }
+
+    modalClose = () => {
+      this.setState({
+        ...this.state,
+        modal: false
+      })
+
     }
   
     componentDidMount(){
-      axios.get(`https://deadtired.herokuapp.com/blogs`)
+      axios.get(`https://deadtired.herokuapp.com/shorts`)
       .then((response) => {
         console.log(response);
   
@@ -32,17 +53,22 @@ class Shorts extends React.Component {
       return (
         <div>
           <NavBar/>
+          <div className={styles.shortsPage}>
           {this.state.isFetching ? (
             <div>Loading...</div>
           ) : 
-            <div>
+            <div className={styles.shortsContainer} className={styles.leftShorts}>
             {this.state.data.map(post => (
-              <div key={post.id}>
-              <LearningCard  post = {post} />
-              </div>
+               <LearningCard  post = {post} key={post.id} onClick={this.modalOpen} />
             ))}
           </div>
         }
+        <div className={styles.rightShorts}>right side bar</div>
+        </div>
+        {this.state.modal ? (
+          <ShortsModal data={this.state.modalData} modalClose={this.modalClose}/>
+        ) : 
+        null}
       </div>
       )
     }

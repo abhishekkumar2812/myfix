@@ -16,13 +16,15 @@ const BookName = () => {
       
       const title = temp.title;
       const content = temp.content;
+      const cover = temp.url;
       console.log(1);
       changebook({title, content})
     }
 
     useEffect(() => {
-      axios.get(`https://deadtired.herokuapp.com/learnings/${id}`)
+      axios.get(`https://deadtired.herokuapp.com/books/${id}`)
       .then((response) => {
+        console.log(response)
         addBook(response.data)
 
       })

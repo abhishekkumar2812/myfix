@@ -1,0 +1,12 @@
+.bannerContainer{
+    display: flex;
+    margin: 10px 50px;
+}
+.bannerHead{
+    flex: 1;
+    padding: 10px
+}
+.bannerContent{
+    padding: 15px;
+    flex: 3;
+}

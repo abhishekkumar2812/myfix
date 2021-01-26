@@ -1,0 +1,11 @@
+.modalContainer{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    z-index: 3;
+    border-radius: 5px;
+    background-color:whitesmoke;
+    overflow-y: scroll;
+}

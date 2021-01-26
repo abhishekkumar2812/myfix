@@ -6,14 +6,13 @@ import styles from '../styles/BookCard.module.scss'
 
 class LearningCard extends Component{
 
-
-
     render(){
         return(
             
                 <div className={styles.bookCardContainer}>
-                    <div className={styles.imageContainer}>
-                        image
+                    <div className={styles.imageContainer} >
+                        <img src={this.props.post.cover.url} alt= 'nahi' className={styles.coverStyle}/>
+                        
                     </div>
 
                     <div className={styles.detailsContainer}>
