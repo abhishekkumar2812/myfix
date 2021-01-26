@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
 import LearningCard from "../components/LearningCard";
 
-import NavBar from '../components/Navbar.js'
+import Navbar from '../components/Navbar.js'
 import styles from '../styles/Home.module.scss'
 
 class Page extends React.Component {
@@ -20,7 +20,7 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <NavBar/>
+        <Navbar/>
         <div className={styles.bannerContainer}>
           <h2 className={styles.bannerHead}>About this site</h2>
           <div className={styles.bannerContent}>this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. this is site is only me understanding things. </div>

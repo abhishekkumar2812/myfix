@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
 import BookCard from "../components/BookCard.js";
 
-import NavBar from '../components/Navbar.js'
+import Navbar from '../components/Navbar.js'
 import styles from '../styles/Books.module.scss'
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ class Books extends React.Component {
     render() {
       return (
         <div>
-          <NavBar/>
+          <Navbar/>
           {this.state.isFetching ? (
             <div>Loading...</div>
           ) : 

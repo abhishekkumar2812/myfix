@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useQuery } from "@apollo/react-hooks";
 import LearningCard from "../components/LearningCard";
 
-import NavBar from '../components/Navbar.js'
+import Navbar from '../components/Navbar.js'
 import styles from '../styles/Shorts.module.scss'
 import ShortsModal from "../components/ShortsModal";
 
@@ -52,7 +52,7 @@ class Shorts extends React.Component {
     render() {
       return (
         <div>
-          <NavBar/>
+          <Navbar/>
           <div className={styles.shortsPage}>
           {this.state.isFetching ? (
             <div>Loading...</div>

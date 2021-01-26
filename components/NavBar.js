@@ -5,7 +5,7 @@ import styles from '../styles/Navbar.module.scss'
 // import {Link} from 'react-router-dom';
 import Link from 'next/link'
 
-class NavBar extends Component{
+class Navbar extends Component{
 
     render(){
         return(
@@ -41,4 +41,4 @@ class NavBar extends Component{
     }
 }
 
-export default NavBar;
+export default Navbar;
