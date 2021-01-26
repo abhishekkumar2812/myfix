@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import getConfig from 'next/config';
 import axios from 'axios';
 import { CardTitle } from "reactstrap";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/Navbar.js";
 
 
 const BookName = () => {
