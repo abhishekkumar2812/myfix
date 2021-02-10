@@ -34,6 +34,11 @@ class Navbar extends Component{
                                 contact
                             </Link>
                         </div>
+                        <div className={styles.navItems}>
+                            <Link href='/learn'>
+                                learn
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

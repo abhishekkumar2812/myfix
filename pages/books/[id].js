@@ -4,13 +4,16 @@ import getConfig from 'next/config';
 import axios from 'axios';
 import { CardTitle } from "reactstrap";
 import Navbar from "../../components/Navbar.js";
+import ReactMarkdown from 'react-markdown';
+
+
 
 
 const BookName = () => {
     const router = useRouter();
     const { id } = router.query; // Destructuring our router object
     
-    const [book, changebook] = useState({title: '', content: ''});
+    const [book, changebook] = useState({title: '', content: null});
 
     const addBook = (temp) => {
       
@@ -43,7 +46,12 @@ const BookName = () => {
           {book.title}
         </h2>
         <div>
-          {book.content}
+          <ReactMarkdown source={book.content}/>
+          {/* {book.content} */}
+        </div>
+        <div>
+          test test test
+          test
         </div>
         
       </>

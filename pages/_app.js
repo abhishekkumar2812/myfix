@@ -4,6 +4,7 @@ import Head from "next/head";
 import withData from "../lib/apollo";
 
 // import '../styles/styles.scss'
+import styles from '../styles/globals.css'
 
 class MyApp extends App {
   render() {
