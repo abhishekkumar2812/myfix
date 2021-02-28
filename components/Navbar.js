@@ -39,6 +39,11 @@ class Navbar extends Component{
                                 learn
                             </Link>
                         </div>
+                        <div className={styles.navItems}>
+                            <Link href='/about'>
+                                about
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

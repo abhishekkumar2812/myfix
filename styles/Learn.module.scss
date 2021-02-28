@@ -1,0 +1,16 @@
+.topicContainer{
+    display: flex;
+    //width: 100%;
+    margin:0 50px;
+    flex-wrap: wrap;
+}
+.topicCard{
+    background-color: #adff2f;
+    // width: 50%;
+    flex: 1 1 100px; 
+    margin:10px;
+    padding: 5px;
+    cursor: pointer;
+    //margin: 10px;
+  //  flex: 1;
+}

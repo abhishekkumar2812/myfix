@@ -10,3 +10,29 @@
     padding: 15px;
     flex: 3;
 }
+.homeContainer{
+    display: flex;
+}
+.homeLeft{
+    flex: 1;
+}
+.homeRight{
+    flex: 2;
+    background-color: yellowgreen;
+    margin: auto;
+}
+.button{
+    padding: 10px 20px;
+    background-color: green;
+    border-radius: 5px;
+    color:  wheat;
+    margin: auto;
+    //margin-right: 50px;
+    width:max-content;
+   // width: 150px;
+    cursor: pointer;
+}
+.buttonText{
+   // padding: 20px;
+    margin:auto;
+}

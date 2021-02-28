@@ -5,12 +5,14 @@ import withData from "../lib/apollo";
 
 // import '../styles/styles.scss'
 import styles from '../styles/globals.css'
+import Layout from "../components/Layout";
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
       <>
+      <Layout>
         <Head>
           <link
             rel="stylesheet"
@@ -21,6 +23,7 @@ class MyApp extends App {
         </Head>
 
         <Component {...pageProps} />
+      </Layout>
       </>
     );
   }

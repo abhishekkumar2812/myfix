@@ -49,11 +49,6 @@ const BookName = () => {
           <ReactMarkdown source={book.content}/>
           {/* {book.content} */}
         </div>
-        <div>
-          test test test
-          test
-        </div>
-        
       </>
     );
   }; 
