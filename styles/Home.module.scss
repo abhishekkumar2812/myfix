@@ -1,3 +1,4 @@
+
 .bannerContainer{
     display: flex;
     margin: 10px 50px;
@@ -15,11 +16,22 @@
 }
 .homeLeft{
     flex: 1;
+    //background-image:url("https://res.cloudinary.com/dmtbxzswf/image/upload/v1615108602/5293_b7jl2s.svg") ;
+    //background-image: url('');
+    background-image: url("/5293.jpg");
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .homeRight{
     flex: 2;
     background-color: yellowgreen;
-    margin: auto;
+    //margin: auto;
+    text-align: center;
+    //padding: 20px;
+}
+.title{
+    margin:20px;
+    top: 20%;
 }
 .button{
     padding: 10px 20px;
@@ -36,3 +48,19 @@
    // padding: 20px;
     margin:auto;
 }
+
+.bannerImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    shape-outside: polygon(0 0, 0 300px, 200px 300px);
+    clip-path: polygon(0 0, 0 300px, 200px 300px);
+    background: linear-gradient(to top right, #67D7F5, #86F7CC);
+    height: 300px;
+    width: 300px;
+  }
