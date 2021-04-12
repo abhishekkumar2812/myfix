@@ -1,0 +1,55 @@
+.modalContainer{
+    z-index:100;
+    top: 20%;
+    left: 30%;
+    position: fixed;
+    height: auto;
+    width: 500px;
+    background-color: yellow;
+    padding: 15px;
+    //display: flex;
+    
+}
+
+.modalTitle{
+    display: flex;
+}
+.modalHeadItem{
+    flex: 1;
+    cursor: pointer;
+    &:hover{
+        background-color: yellowgreen;
+    }   
+}
+
+.bottom{
+    display: flex;
+}
+.submitButton{
+    background-color: green;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+.cancel{
+    //float: right;
+    flex: 1;
+    margin: auto;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.selected{
+    background-color: red;
+}
+
+.displayNone{
+    display: none;
+}

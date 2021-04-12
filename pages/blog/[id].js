@@ -6,7 +6,7 @@ import { CardTitle } from "reactstrap";
 import Navbar from "../../components/Navbar.js";
 import ReactMarkdown from 'react-markdown';
 
-const BookName = () => {
+const BlogName = () => {
     const router = useRouter();
     const { id } = router.query; // Destructuring our router object
     
@@ -50,4 +50,4 @@ const BookName = () => {
     );
   }; 
 
-  export default BookName;
+  export default BlogName;
