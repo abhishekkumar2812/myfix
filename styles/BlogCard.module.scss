@@ -1,0 +1,41 @@
+.blogCardContainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    margin-top: 10px;
+    
+
+}
+.imageContainer{
+    //flex: 1;
+    height: 200px;
+    background-color: blue;
+}
+
+.coverStyle{
+    //max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.detailsContainer{
+//    flex: 3;
+height: 200px;
+    position: relative;
+    background-color: greenyellow;
+    //margin: 5px;
+}
+.title{
+    margin: 5px;
+
+}
+.intro{
+    margin: 5px;
+}
+.info{
+    position: absolute;
+    bottom: 0;
+    margin: 5px;
+    //right: 0;
+}
