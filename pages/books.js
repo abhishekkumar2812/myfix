@@ -8,6 +8,7 @@ import BookCard from "../components/BookCard.js";
 import Navbar from '../components/Navbar.js'
 import styles from '../styles/Books.module.scss'
 import Link from "next/link";
+import LoginModal from "../components/LoginModal.js";
 
 class Books extends React.Component {
     state = {
@@ -34,6 +35,7 @@ class Books extends React.Component {
       return (
         <div>
           <Navbar/>
+          <LoginModal/>
           {this.state.isFetching ? (
             <div>Loading...</div>
           ) : 

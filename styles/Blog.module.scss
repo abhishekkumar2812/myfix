@@ -1,0 +1,30 @@
+.blogCardWrapper{
+    display: flex;
+    flex-wrap:wrap;
+}
+.anchorFlex{
+    margin: auto;
+    text-decoration: none;
+    display: flex;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.bodyContainer{
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.imageContainer{
+    width: 20%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.textContainer{
+
+}
+.coverStyle{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

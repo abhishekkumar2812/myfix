@@ -13,7 +13,7 @@ import {supabase} from '../utils/supabaseClient';
 class MyApp extends App {
   state = {
     user: null,
-    loginModal: true,
+    loginModal: false,
     loginError: false,
     loginErrorMsg: ''
   };

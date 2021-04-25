@@ -8,13 +8,14 @@ import LearningCard from "../components/LearningCard";
 import Navbar from '../components/Navbar.js'
 import styles from '../styles/Shorts.module.scss'
 import ShortsModal from "../components/ShortsModal";
+import LoginModal from "../components/LoginModal";
 
 class Contact extends React.Component{
     render(){
         return(
             <div>
                 <Navbar/>
-            
+                <LoginModal/>
             <div>email: vibrant.abhishek@gmail.com</div>
             </div>
         )

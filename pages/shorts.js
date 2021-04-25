@@ -8,6 +8,7 @@ import LearningCard from "../components/LearningCard";
 import Navbar from '../components/Navbar.js'
 import styles from '../styles/Shorts.module.scss'
 import ShortsModal from "../components/ShortsModal";
+import LoginModal from "../components/LoginModal";
 
 class Shorts extends React.Component {
     state = {
@@ -53,6 +54,7 @@ class Shorts extends React.Component {
       return (
         <div>
           <Navbar/>
+          <LoginModal/>
           <div className={styles.shortsPage}>
           {this.state.isFetching ? (
             <div>Loading...</div>

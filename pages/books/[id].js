@@ -5,6 +5,7 @@ import axios from 'axios';
 import { CardTitle } from "reactstrap";
 import Navbar from "../../components/Navbar.js";
 import ReactMarkdown from 'react-markdown';
+import LoginModal from "../../components/LoginModal.js";
 
 const BookName = () => {
     const router = useRouter();
@@ -39,6 +40,7 @@ const BookName = () => {
     return (
       <>
       <Navbar />
+      <LoginModal/>
         <h2>
           {book.title}
         </h2>
