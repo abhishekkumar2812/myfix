@@ -20,7 +20,7 @@ class Blog extends React.Component{
     }
 
     fetchTodos = async () => {
-        const temp = await supabase.from('blog').select('id, title, cover, intro, time').order('id', {ascending: false}).limit(10)
+        const temp = await supabase.from('blog').select('id, title, cover, intro, time, author').order('id', {ascending: false}).limit(10)
         this.setState({
             // body: temp.data[1].content
             body: temp.data

@@ -15,11 +15,32 @@
     flex-direction: column;
     margin: 20px;
 }
+.blogHeader{
+    display: flex;
+}
 .imageContainer{
     width: 20%;
-    margin: auto;
+    //margin: auto;
     margin-bottom: 20px;
 }
+.infoContainer{
+    margin: 10px;
+}
+.controlsContainer{
+    margin: 10px;
+
+    .likeButton{
+        background-color: greenyellow;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .dislikeButton{
+        background-color: hotpink;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+}
+
 .textContainer{
 
 }

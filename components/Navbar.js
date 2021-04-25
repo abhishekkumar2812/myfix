@@ -38,11 +38,11 @@ class Navbar extends Component{
                             </Link>
                         </div>
 
-                        <div className={styles.navItems}>
+                        {/* <div className={styles.navItems}>
                             <Link href='/shorts'>
                             shorts
                             </Link>
-                        </div>
+                        </div> */}
 
                         <div className={styles.navItems}>
                             <Link href='/blog'>
@@ -50,11 +50,11 @@ class Navbar extends Component{
                             </Link>
                         </div>
 
-                        <div className={styles.navItems}>
+                        {/* <div className={styles.navItems}>
                             <Link href='/books'>
                                 books
                             </Link>
-                        </div>
+                        </div> */}
                         <div className={styles.navItems}>
                             <Link href='/contact'>
                                 contact

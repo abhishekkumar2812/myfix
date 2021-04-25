@@ -49,7 +49,7 @@ class MyApp extends App {
           .from('users')
           .select('*')
           .eq('id', user.id)
-          localStorage.setItem('user', userData);
+          localStorage.setItem('user', JSON.stringify(userData.data[0]));
           this.setState({
             user: user
           });
@@ -72,6 +72,8 @@ class MyApp extends App {
       email: email,
       password: password
     })
+
+    console.log(user)
 
     if(error){
       console.log(error)
